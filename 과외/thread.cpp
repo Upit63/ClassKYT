@@ -26,7 +26,7 @@ void arr_func(const int &iThread,const int& nID)
 	for (int i = 0; i < (2500000 / iThread); ++i)
 	{
 		arr_sum[nID] += 2;
-	}
+	}     
 }
 int main()
 {
