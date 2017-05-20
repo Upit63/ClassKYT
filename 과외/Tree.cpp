@@ -60,7 +60,6 @@ public:
 		tail->next = nullptr;
 		head->before = nullptr;
 		tail->before = head;
-
 	}
 
 	void release()
@@ -370,9 +369,6 @@ public:
 		auto center_node = static_cast<int>((start_index + end_index) / 2);
 		auto satrt_node_distance= end_index - start_index;
 		my_sort(1, 2, ++level, all_size);
-
-		
-			
 	}
 
 	void sort()
@@ -424,10 +420,31 @@ private:
 
 };
 
+#include <fstream>
 int main()
 {
-	cout << sum(5) << endl;
+	//cout << sum(5) << endl;
+	std::ifstream ifs("read.csv", std::ios::binary);
+
+	std::vector<char> v;
+	char c;
+	while (!ifs.eof())
+	{
+		ifs >> c;
+		//cout << c;
+		if (c == ',' || c== ' ')
+		{
+			continue;
+		}
+		v.push_back(c);
+	}
+
+	ifs.close();
 	
+	std::ofstream ofs("save_csv.txt", std::ios::binary);
+	for (auto& d : v)
+		ofs << d;
+	ofs.close();
 
 	return 0;
 }																		

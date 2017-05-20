@@ -63,6 +63,9 @@
     <ClCompile Include="thread.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="2017_04_02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

@@ -122,7 +122,6 @@ int main()
 	iCount_Output = size(Output_Word);
 
 
-
 	std::vector<int> v;
 	std::set<int> s;
 	
